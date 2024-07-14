@@ -9,12 +9,11 @@ class Category(db.Model):
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self
-
+        return self.category_name
 
 
 class Task(db.Model):
-    # schema for the Task Model
+    # schema for the Task model
     id = db.Column(db.Integer, primary_key=True)
     task_name = db.Column(db.String(50), unique=True, nullable=False)
     task_description = db.Column(db.Text, nullable=False)
